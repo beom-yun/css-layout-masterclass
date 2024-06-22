@@ -1,21 +1,34 @@
-body {
-  display: flex;
-  gap: 5px;
-  justify-content: space-between;
+/* img {
+  display: block;
+} */
 
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-  flex-flow: row wrap;
+.father {
+  display: grid;
+  grid-template-columns: 100px 200px 50px;
+  grid-template-rows: 200px 100px;
+  row-gap: 10px;
+  column-gap: 20px;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
+.child {
   background-color: tomato;
-  color: white;
-  font-size: 36px;
-
   display: flex;
+  color: white;
+  font-size: 32px;
   justify-content: center;
   align-items: center;
+}
+
+.child:first-child {
+  background-color: gold;
+  grid-row: 1 / -1;
+  /* grid-row-start: 1;
+  grid-row-end: -1; */
+}
+
+.child:last-child {
+  background-color: turquoise;
+  grid-column: 2 / -1;
+  /* grid-column-start: 2;
+  grid-column-end: -1; */
 }
