@@ -2,33 +2,39 @@
   display: block;
 } */
 
-.father {
+body {
+  padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: 100px 200px 50px;
-  grid-template-rows: 200px 100px;
-  row-gap: 10px;
-  column-gap: 20px;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    'a a a a'
+    'b b b c'
+    'd d d d'; */
+  grid-template:
+    'a a a a' 1fr
+    'b b b c' 2fr
+    'd d d d' 1fr / 1fr 1fr 1fr 1fr;
 }
 
-.child {
-  background-color: tomato;
-  display: flex;
-  color: white;
-  font-size: 32px;
-  justify-content: center;
-  align-items: center;
+header {
+  background-color: aqua;
+  grid-area: a;
 }
 
-.child:first-child {
-  background-color: gold;
-  grid-row: 1 / -1;
-  /* grid-row-start: 1;
-  grid-row-end: -1; */
+section {
+  background-color: coral;
+  grid-area: b;
 }
 
-.child:last-child {
-  background-color: turquoise;
-  grid-column: 2 / -1;
-  /* grid-column-start: 2;
-  grid-column-end: -1; */
+aside {
+  background-color: forestgreen;
+  grid-area: c;
+}
+
+footer {
+  background-color: deeppink;
+  grid-area: d;
 }
