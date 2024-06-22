@@ -1,8 +1,11 @@
 body {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
+  gap: 5px;
+  justify-content: space-between;
+
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
 }
 
 .box {
