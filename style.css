@@ -2,39 +2,18 @@
   display: block;
 } */
 
-body {
-  padding: 0;
-  margin: 0;
+.father {
   display: grid;
+  gap: 10px;
   height: 100vh;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-template-areas:
-    'a a a a'
-    'b b b c'
-    'd d d d'; */
-  grid-template:
-    'a a a a' 1fr
-    'b b b c' 2fr
-    'd d d d' 1fr / 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
 }
 
-header {
-  background-color: aqua;
-  grid-area: a;
-}
-
-section {
-  background-color: coral;
-  grid-area: b;
-}
-
-aside {
-  background-color: forestgreen;
-  grid-area: c;
-}
-
-footer {
-  background-color: deeppink;
-  grid-area: d;
+.child {
+  background-color: tomato;
+  display: flex;
+  color: white;
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
 }
