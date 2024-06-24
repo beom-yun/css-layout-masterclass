@@ -1,3 +1,123 @@
+@import './reset.scss';
+
 /* img {
   display: block;
 } */
+
+body {
+  background-color: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  width: 428px;
+  height: 926px;
+  padding: 70px 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    color: white;
+    gap: 10px;
+    width: max-content;
+    .header__list-item {
+      padding: 10px;
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      border-radius: 20px;
+    }
+    .header__list-item--inverted {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+  gap: 10px;
+
+  .cards__card {
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    box-sizing: border-box;
+    .card__title {
+      font-size: 32px;
+    }
+    .card__footer {
+      display: flex;
+      justify-content: space-between;
+      .price,
+      .length {
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 12px;
+      }
+    }
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+    &:first-child {
+      background-color: #2a2d33;
+      border: 1px solid white;
+      color: white;
+      .price {
+        background-color: #fdd927;
+        border: 1px solid #2a2d33;
+        color: #2a2d33;
+      }
+      .length {
+        color: black;
+      }
+    }
+    &:nth-child(2) {
+      background-color: white;
+      .price {
+        background-color: #fdd927;
+      }
+    }
+    &:nth-child(3) {
+      background-color: #f8fdb8;
+      .price {
+        background-color: #e9affc;
+      }
+    }
+    &:nth-child(4) {
+      background-color: #b9a7f8;
+      .price {
+        background-color: #fdd927;
+      }
+    }
+    &:nth-child(5) {
+      background-color: #fed3d3;
+      .price {
+        background-color: #e9affc;
+      }
+    }
+    &:last-child {
+      background-color: #d1fedd;
+      .price {
+        background-color: #fdd927;
+      }
+    }
+  }
+}
