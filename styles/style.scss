@@ -10,11 +10,120 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #70419e;
+}
 
-  .wrapper {
-    background-color: black;
-    padding: 10px;
-    width: 960px;
-    height: 640px;
+.wrapper {
+  background-color: black;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 960px;
+  height: 640px;
+
+  .grid {
+    display: grid;
+    height: 100%;
+    gap: 2px;
+    grid-template: 5fr 4fr 4fr / 4fr 4fr 3fr 2fr;
+
+    & > * {
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .header {
+      grid-row: span 2;
+      grid-column: span 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      .header__top {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+
+        .header__reviews {
+          font-size: x-large;
+        }
+        .header__label {
+          background-color: yellow;
+          font-size: small;
+          padding: 5px 10px;
+          border-radius: 20px;
+        }
+      }
+
+      .header__title {
+        font-size: 120px;
+        font-weight: bold;
+      }
+
+      .header__subtitle {
+        font-size: 28px;
+        border-top: 1px solid black;
+        padding-top: 10px;
+        font-weight: bold;
+      }
+    }
+
+    .nav {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: small;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nav__cta {
+        font-size: large;
+      }
+    }
+
+    .grid__cells {
+      display: grid;
+      gap: 20px;
+      grid-template-rows: repeat(2, 1fr) 2fr;
+      .grid__cell {
+        border-radius: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 20px;
+        &:first-child {
+          background-color: #ffc830;
+        }
+        &:nth-child(2) {
+          background-color: white;
+          transform: rotateZ(7deg);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.8);
+        }
+      }
+      .grid__cell-cta {
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding-left: 20px;
+        align-self: center;
+      }
+    }
+
+    .grid__blog-post {
+      grid-column: span 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-size: small;
+    }
   }
 }
